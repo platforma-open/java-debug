@@ -1,0 +1,43 @@
+{
+  "name": "@platforma-open/milaboratories.software-mixcr",
+  "version": "0.0.2",
+  "description": "MiXCR software dependency for Platforma Backend",
+  "scripts": {
+    "build-ci": "true",
+    
+    "build": "pl-pkg build",
+    "sign": "pl-pkg sign packages --sign-command='[\"gcloud-kms-sign\", \"{pkg}\", \"{pkg}.sig\"]'",
+
+    "prepublishOnly": "npm run build && npm run sign && npm run publish packages"
+  },
+  "block-software": {
+    "entrypoints": {
+      "flags": {
+        "binary": {
+          "artifact": {
+            "registry": "platforma-open",
+            "name": "milaboratories/java-debug",
+            "type": "java",
+            "environment": "@platforma-open/milaboratories.runenv-java-corretto:21.0.2.13.1",
+            "root": "./src/"
+          },
+          "cmd": [
+            "java",
+            "-XX:MaxRAMPercentage=100.0",
+            "-XX:+PrintFlagsFinal",
+            "-version"
+          ]
+        }
+      }
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@platforma-sdk/package-builder": "catalog:",
+    "@platforma-open/milaboratories.runenv-java-corretto": "catalog:",
+    "unzipper": "^0.12.3"
+  }
+}

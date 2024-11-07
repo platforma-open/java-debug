@@ -26,10 +26,10 @@
       "url": "https://github.com/milaboratory/platforma-java-debug",
       "docs": "https://github.com/milaboratory/platforma-java-debug/docs",
       "support": "mailto:support@milaboratories.com",
-      "description": "Simple Hello World block that can be used as a boilerplate for newly created blocks.",
+      "description": "Block that helps with determining the environment available for JAVA application when executed by Platforma Backend",
       "longDescription": "file:./docs/description.md",
       "changelog": "file:CHANGELOG.md",
-      "tags": ["tutorial"],
+      "tags": ["debugging"],
       "organization": {
         "name": "MiLaboratories Inc",
         "url": "https://milaboratories.com/",
