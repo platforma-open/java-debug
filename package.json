@@ -1,0 +1,44 @@
+{
+  "name": "@platforma-open/milaboratories.java-debug",
+  "version": "1.0.0",
+  "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
+    "build": "rm -rf ./block-pack && block-tools pack"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "dependencies": {
+    "@platforma-open/milaboratories.java-debug.workflow": "workspace:*",
+    "@platforma-open/milaboratories.java-debug.model": "workspace:*",
+    "@platforma-open/milaboratories.java-debug.ui": "workspace:*"
+  },
+  "block": {
+    "components": {
+      "workflow": "@platforma-open/milaboratories.java-debug.workflow/dist/tengo/tpl/main.plj.gz",
+      "model": "@platforma-open/milaboratories.java-debug.model/dist/model.json",
+      "ui": "@platforma-open/milaboratories.java-debug.ui/dist"
+    },
+    "meta": {
+      "title": "Block Title",
+      "logo": "file:logos/block-logo.png",
+      "url": "https://github.com/milaboratory/platforma-java-debug",
+      "docs": "https://github.com/milaboratory/platforma-java-debug/docs",
+      "support": "mailto:support@milaboratories.com",
+      "description": "Simple Hello World block that can be used as a boilerplate for newly created blocks.",
+      "longDescription": "file:./docs/description.md",
+      "changelog": "file:CHANGELOG.md",
+      "tags": ["tutorial"],
+      "organization": {
+        "name": "MiLaboratories Inc",
+        "url": "https://milaboratories.com/",
+        "logo": "file:logos/milaboratories.png"
+      }
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:",
+    "@platforma-sdk/block-tools": "catalog:"
+  }
+}
