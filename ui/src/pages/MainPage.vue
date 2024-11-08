@@ -9,13 +9,13 @@ const app = useApp();
 <template>
   <PlBlockPage>
   
-    <PlTextField v-model="app.model.args.name" label="Enter your name" clearable />
+    <PlTextField v-model="app.model.args.deduplication" label="Deduplication trick" clearable />
 
-    <PlAlert type="success" v-if="app.model.outputs.message">
+    <pre>
 
       {{ app.model.outputs.message }}
 
-    </PlAlert>
+    </pre>
 
   </PlBlockPage>
 </template>

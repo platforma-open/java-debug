@@ -12,6 +12,7 @@
     "@platforma-sdk/tengo-builder": "catalog:",
     "@platforma-sdk/workflow-tengo": "catalog:",
     "@platforma-sdk/test": "catalog:",
+    "@platforma-open/milaboratories.java-debug.software": "workspace:",
     "vitest": "catalog:"
   }
 }

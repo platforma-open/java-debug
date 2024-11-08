@@ -1,10 +1,21 @@
-// "hello world"
+assets := import("@platforma-sdk/workflow-tengo:assets")
 wf := import("@platforma-sdk/workflow-tengo:workflow")
+exec := import("@platforma-sdk/workflow-tengo:exec")
+
+javaFlags := assets.importSoftware("@platforma-open/milaboratories.java-debug.software:flags")
 
 wf.body(func(args) {
+	run := exec.builder().
+					software(javaFlags).
+					inMediumQueue().
+					saveStdoutContent().
+					run()
+
+	flagsReport := run.getStdoutFileContent()
+
 	return {
 		outputs: {
-			message: "Hello, " + args.name + "!"
+			message: flagsReport
 		},
 
 		exports: {}

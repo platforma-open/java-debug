@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
-    "build": "rm -rf ./block-pack && block-tools pack"
+    "build": "rm -rf ./block-pack && block-tools pack",
+
+    "publish-software": "cd software && pnpm publish",
+    "prepublishOnly": "pnpm run publish-software && block-tools pack && block-tools publish -r 's3://milab-euce1-prod-pkgs-s3-block-registry/aux/dev/?region=eu-central-1'"
   },
   "files": [
     "index.d.ts",
@@ -21,7 +24,7 @@
       "ui": "@platforma-open/milaboratories.java-debug.ui/dist"
     },
     "meta": {
-      "title": "Block Title",
+      "title": "JAVA debug block",
       "logo": "file:logos/block-logo.png",
       "url": "https://github.com/milaboratory/platforma-java-debug",
       "docs": "https://github.com/milaboratory/platforma-java-debug/docs",

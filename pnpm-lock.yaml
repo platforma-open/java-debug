@@ -150,6 +150,9 @@ importers:
 
   workflow:
     devDependencies:
+      '@platforma-open/milaboratories.java-debug.software':
+        specifier: 'workspace:'
+        version: link:../software
       '@platforma-sdk/tengo-builder':
         specifier: 'catalog:'
         version: 1.16.1

@@ -1,14 +1,13 @@
 {
-  "name": "@platforma-open/milaboratories.software-mixcr",
+  "name": "@platforma-open/milaboratories.java-debug.software",
   "version": "0.0.2",
   "description": "MiXCR software dependency for Platforma Backend",
   "scripts": {
-    "build-ci": "true",
-    
-    "build": "pl-pkg build",
+    "build": "pl-pkg build --dev=local",
     "sign": "pl-pkg sign packages --sign-command='[\"gcloud-kms-sign\", \"{pkg}\", \"{pkg}.sig\"]'",
 
-    "prepublishOnly": "npm run build && npm run sign && npm run publish packages"
+    "build-release": "pl-pkg build",
+    "prepublishOnly": "npm run build-release && npm run sign && npm run publish packages"
   },
   "block-software": {
     "entrypoints": {
