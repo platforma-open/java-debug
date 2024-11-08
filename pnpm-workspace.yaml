@@ -13,7 +13,7 @@ catalog:
   "@platforma-sdk/test": ^1.7.48
   "@platforma-sdk/tengo-builder": ^1.16.1
   
-  "@platforma-open/milaboratories.java-debug.software": ^1.0.0
+  "@platforma-open/milaboratories.runenv-java-corretto": ^1.1.5
 
   "vue": ^3.4.34
   "vue-tsc": ^2.0.29
