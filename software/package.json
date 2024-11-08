@@ -8,7 +8,7 @@
     "build": "pl-pkg build",
     "sign": "pl-pkg sign packages --sign-command='[\"gcloud-kms-sign\", \"{pkg}\", \"{pkg}.sig\"]'",
 
-    "prepublishOnly": "npm run build && npm run sign && npm run publish packages"
+    "prepublishOnly": "npm run build && npm run sign && pl-pkg publish packages"
   },
   "block-software": {
     "entrypoints": {
