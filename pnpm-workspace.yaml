@@ -1,5 +1,4 @@
 packages:
-  - software
   - workflow
   - model
   - ui
@@ -15,6 +14,7 @@ catalog:
   "@platforma-sdk/tengo-builder": ^1.16.1
   "@platforma-sdk/package-builder": ^2.10.6
   
+  "@platforma-open/milaboratories.java-debug.software": ^1.0.0
   "@platforma-open/milaboratories.runenv-java-corretto": ^1.0.2
 
   "vue": ^3.4.34

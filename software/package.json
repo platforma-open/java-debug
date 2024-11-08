@@ -1,13 +1,14 @@
 {
   "name": "@platforma-open/milaboratories.java-debug.software",
-  "version": "0.0.2",
-  "description": "MiXCR software dependency for Platforma Backend",
+  "version": "1.0.0",
+  "description": "JAVA commands for showing execution environment bounds",
   "scripts": {
-    "build": "pl-pkg build --dev=local",
+    "build-skip": "echo 'Fake build script for CI workflow optimisation'",
+
+    "build": "pl-pkg build",
     "sign": "pl-pkg sign packages --sign-command='[\"gcloud-kms-sign\", \"{pkg}\", \"{pkg}.sig\"]'",
 
-    "build-release": "pl-pkg build",
-    "prepublishOnly": "npm run build-release && npm run sign && npm run publish packages"
+    "prepublishOnly": "npm run build && npm run sign && npm run publish packages"
   },
   "block-software": {
     "entrypoints": {
