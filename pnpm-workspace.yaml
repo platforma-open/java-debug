@@ -11,7 +11,7 @@ catalog:
   "@platforma-sdk/workflow-tengo": ^5.3.3
   "@platforma-sdk/block-tools": ^2.3.21
   "@platforma-sdk/test": ^1.7.48
-  "@platforma-sdk/tengo-builder": ^1.16.1
+  "@platforma-sdk/tengo-builder": ^2.3.0
   
   "@platforma-open/milaboratories.runenv-java-corretto": ^1.1.5
 
